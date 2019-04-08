@@ -1,0 +1,25 @@
+﻿<Window x:Class="кп.Admin_log"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:кп"
+        mc:Ignorable="d"
+        Title="Admin_log" Height="534" Width="800" MinHeight="534" MinWidth="800" MaxHeight="534" MaxWidth="800" x:Name="menulog" Background="{StaticResource back}">
+    <Grid Name="grid">
+        <Menu Background="{StaticResource bl1}" x:Name="menu" HorizontalAlignment="Left" Height="505" VerticalAlignment="Top" Width="200" Margin="0,0,0,-0.2">
+            <MenuItem  Focusable="False" IsHitTestVisible="False"  IsManipulationEnabled="False"   IsCheckable="False" x:Name="m1"   FontFamily="Cormorant Goromond" Height="136" >
+                <MenuItem.Icon>
+                    <Image Source="cn.png" Margin="10,-32,-167,-47"  />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="Hello, admin!"  Focusable="False" IsHitTestVisible="False"  IsManipulationEnabled="False" IsCheckable="False" x:Name="m3" FontSize="12pt" Padding="45,0,0,0"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Height="60" />
+            <MenuItem x:Name="edit_users" Click="edit_users_Click" Header="Пользователи" />
+            <MenuItem x:Name="recipes" Click="recipes_Click"  Header="Рецепты" />
+            <MenuItem x:Name="add_prod" Click="add_prod_Click" Header="Ингредиенты" />
+            <MenuItem x:Name="exit"  Click="exit_Click" Header="Выйти из аккаунта" />
+
+        </Menu>
+
+    </Grid>
+</Window>

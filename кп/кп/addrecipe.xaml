@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="кп.addrecipe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:кп"
+             mc:Ignorable="d" 
+             d:DesignHeight="534" d:DesignWidth="800" MinHeight="534" MinWidth="800" MaxHeight="534" MaxWidth="800">
+    <Grid Margin="200,0,0,-0.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="20" HorizontalContentAlignment="Center" Content="Новый рецепт" HorizontalAlignment="Left" Margin="-1,30,0,0" VerticalAlignment="Top" Width="600" Height="34"/>
+        <Label Content="Введите название" HorizontalAlignment="Left" Margin="21,90,0,0" VerticalAlignment="Top" Height="24" Width="141"/>
+        <TextBox x:Name="rec_name"  HorizontalAlignment="Left" Height="23" Margin="177,90,0,0" TextWrapping="Wrap" Text="Например, Малиновый чизкейк" VerticalAlignment="Top" Width="381"/>
+        <Label Content="Приготовление" HorizontalAlignment="Left" Margin="18,127,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="prigotovlenie" HorizontalAlignment="Left" Height="143" Margin="18,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262"/>
+        <Label Content="Добавление ингредиентов" HorizontalAlignment="Left" Margin="343,127,0,0" VerticalAlignment="Top"/>
+        <Label Content="Тип" HorizontalAlignment="Left" Margin="357,178,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="type_prod" SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Left" Height="41" Margin="404,170,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label Content="Ингредиент" HorizontalAlignment="Left" Margin="298,227,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.535"/>
+        <ListBox x:Name="ingred_list" HorizontalAlignment="Left" Height="40" Margin="404,216,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label Content="Вес(г.)" HorizontalAlignment="Left" Margin="343,266,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="weight_ingr" HorizontalAlignment="Left" Height="24" Margin="405,268,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="176"/>
+        <Button x:Name="add_ingred" Content="Добавить ингредиент" HorizontalAlignment="Left" Height="43" Margin="326,315,0,0" VerticalAlignment="Top" Width="220" Click="add_ingred_Click"/>
+        <TextBlock Foreground="White" FontFamily="./#Montserrat Alternates Medium"   Background="{StaticResource bl1}"  x:Name="info_recipe" HorizontalAlignment="Left" Margin="26,328,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="155" Width="160"/>
+        <Button x:Name="calculate" Content="Рассчитать ЭЦ" HorizontalAlignment="Left" Margin="203,371,0,0" VerticalAlignment="Top" Width="217" Height="34" Click="calculate_Click"/>
+        <Button x:Name="create_recipe" Content="Создать рецепт" HorizontalAlignment="Left" Margin="203,430,0,0" VerticalAlignment="Top" Width="217" Click="create_recipe_Click"/>
+
+    </Grid>
+</UserControl>
